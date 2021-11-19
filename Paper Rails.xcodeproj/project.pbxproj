@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		628163F7274804DF005E8C8C /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 628163F6274804DF005E8C8C /* Readme.md */; };
 		62CF00612661B0E600466403 /* Paper_RailsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CF00602661B0E600466403 /* Paper_RailsApp.swift */; };
 		62CF00632661B0E600466403 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CF00622661B0E600466403 /* ContentView.swift */; };
 		62CF00652661B0E800466403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62CF00642661B0E700466403 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		628163F6274804DF005E8C8C /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		62CF005D2661B0E600466403 /* Paper Rails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paper Rails.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62CF00602661B0E600466403 /* Paper_RailsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paper_RailsApp.swift; sourceTree = "<group>"; };
 		62CF00622661B0E600466403 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		62CF00542661B0E600466403 = {
 			isa = PBXGroup;
 			children = (
+				628163F6274804DF005E8C8C /* Readme.md */,
 				62CF005F2661B0E600466403 /* Paper Rails */,
 				62CF005E2661B0E600466403 /* Products */,
 			);
@@ -134,6 +137,7 @@
 			files = (
 				62CF00682661B0E800466403 /* Preview Assets.xcassets in Resources */,
 				62CF00652661B0E800466403 /* Assets.xcassets in Resources */,
+				628163F7274804DF005E8C8C /* Readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
