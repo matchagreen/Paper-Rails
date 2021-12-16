@@ -8,24 +8,30 @@
 import SwiftUI
 
 struct CardView: View {
+    @Binding var entry: Entry
     var body: some View {
         HStack {
-                Label("10:30", systemImage: "clock")
-                    .frame(width: 90.0)
-                
-                Divider()
-                Text("Task")
-                    .padding(.horizontal)
-                Spacer()
+            VStack {
+                Text("Day")
+                Text("Date")
+            }
+            .font(.caption)
+            .padding(.leading)
+            
+            Divider()
+            Text(entry.title)
+                .padding(.horizontal)
+            Spacer()
         }
-        .frame(height: 35.0)
-        .foregroundColor(.black)
+        .padding(.trailing)
+        .frame(height: 40.0)
+        .background(entry.theme.mainColor)
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
-            .previewLayout(.fixed(width: 400, height: 60))
+        CardView(entry: .constant(Entry.getSampleDate()[0]))
+            .previewLayout(.sizeThatFits)
     }
 }

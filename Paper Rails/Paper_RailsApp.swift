@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Paper_RailsApp: App {
+    @State private var entries = Entry.getSampleDate()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                MainView(entries: $entries)
+            }
         }
     }
 }

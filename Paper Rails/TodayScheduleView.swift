@@ -10,18 +10,19 @@ import SwiftUI
 struct TodayScheduleView: View {
     var body: some View {
         VStack() {
+            /*
             List {
                 NavigationLink(destination: Text("Placeholder")) {
                     CardView()
                 }
                 .listRowBackground(Color.green)
                 
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: Menu()) {
                     CardView()
                 }
                 .listRowBackground(Color.green)
                 
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: Menu()) {
                     CardView()
                 }
                 .listRowBackground(Color.green)
@@ -32,6 +33,7 @@ struct TodayScheduleView: View {
             }) {
                 Image(systemName: "plus")
             })
+             */
         }
         Spacer()
     }
