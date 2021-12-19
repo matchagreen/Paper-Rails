@@ -11,21 +11,25 @@ struct CardView: View {
     @Binding var entry: Entry
     var body: some View {
         HStack {
-            VStack {
-                Text("Day")
-                Text("Date")
-            }
-            .font(.caption)
-            .padding(.leading)
+            CardDateView(entry: $entry)
             
             Divider()
             Text(entry.title)
                 .padding(.horizontal)
             Spacer()
         }
-        .padding(.trailing)
         .frame(height: 40.0)
-        .background(entry.theme.mainColor)
+    }
+}
+
+struct CardDateView: View {
+    @Binding var entry: Entry
+    var body: some View {
+        VStack {
+            Text("\(entry.date.getWeekday())")
+            Text("\(entry.date.get(.month))/\(entry.date.get(.day))")
+        }
+        .frame(width: 40)
     }
 }
 

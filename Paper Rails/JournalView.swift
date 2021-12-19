@@ -10,9 +10,20 @@ import SwiftUI
 struct JournalView: View {
     @Binding var entries: [Entry]
     var body: some View {
+        EntriesView(entries: $entries)
+    }
+}
+
+struct EntriesView: View {
+    @State private var isPresentingEntry = false
+    @State private var presentedEntry = Entry(title: "", body: "")
+    @Binding var entries: [Entry]
+    var body: some View {
         List {
             ForEach($entries) { $entry in
-                CardView(entry: $entry)
+                NavigationLink(destination: Text("FIX ME")) {
+                    CardView(entry: $entry)
+                }
             }
         }
         .navigationTitle("Journal")

@@ -13,10 +13,17 @@ enum Theme: String, CaseIterable, Identifiable, Codable {
     case brown
     case blue
     
-    var mainColor: Color {Color(rawValue)}
-    var name: String {rawValue.capitalized}
-    var id: String {name}
-    static var todaysTheme: Theme {.blue}
+    var mainColor: Color {
+        Color(rawValue)
+    }
+    
+    var name: String {
+        rawValue.capitalized
+    }
+    
+    var id: String {
+        name
+    }
 }
 
 

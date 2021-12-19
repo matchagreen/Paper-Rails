@@ -13,9 +13,7 @@ struct Paper_RailsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                MainView(entries: $entries)
-            }
+            MainView(entries: $entries)
         }
     }
 }
