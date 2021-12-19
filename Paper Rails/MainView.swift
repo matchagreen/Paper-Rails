@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct MainView: View {
+    @State private var tabBar: UITabBar! = nil
     @Binding var entries: [Entry]
+    
     var body: some View {
         TabView {
             NavigationView {

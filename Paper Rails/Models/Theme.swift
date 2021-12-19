@@ -26,4 +26,6 @@ enum Theme: String, CaseIterable, Identifiable, Codable {
     }
 }
 
-
+func getDatesTheme(date: Date) -> Theme {
+    return .blue
+}

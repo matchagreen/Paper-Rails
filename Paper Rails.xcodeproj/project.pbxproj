@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		6204B6BA276BD681006B1351 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6204B6B9276BD681006B1351 /* Theme.swift */; };
 		6204B6BC276BEC39006B1351 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6204B6BB276BEC39006B1351 /* MainView.swift */; };
 		628163F7274804DF005E8C8C /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 628163F6274804DF005E8C8C /* Readme.md */; };
+		62ABBE9F276FBC0F008ABB00 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 62ABBE9E276FBC0F008ABB00 /* Introspect */; };
+		62ABBEA4276FCB6B008ABB00 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ABBEA3276FCB6B008ABB00 /* StringExtensions.swift */; };
+		62ABBEA6276FCBA2008ABB00 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ABBEA5276FCBA2008ABB00 /* DateExtensions.swift */; };
+		62ACBAF3276FA9AE00BD85AB /* EntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ACBAF2276FA9AE00BD85AB /* EntryDetailView.swift */; };
 		62CF00612661B0E600466403 /* Paper_RailsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CF00602661B0E600466403 /* Paper_RailsApp.swift */; };
 		62CF00652661B0E800466403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62CF00642661B0E700466403 /* Assets.xcassets */; };
 		62CF00682661B0E800466403 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62CF00672661B0E800466403 /* Preview Assets.xcassets */; };
@@ -26,6 +30,9 @@
 		6204B6B9276BD681006B1351 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		6204B6BB276BEC39006B1351 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		628163F6274804DF005E8C8C /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		62ABBEA3276FCB6B008ABB00 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		62ABBEA5276FCBA2008ABB00 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		62ACBAF2276FA9AE00BD85AB /* EntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailView.swift; sourceTree = "<group>"; };
 		62CF005D2661B0E600466403 /* Paper Rails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paper Rails.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62CF00602661B0E600466403 /* Paper_RailsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paper_RailsApp.swift; sourceTree = "<group>"; };
 		62CF00642661B0E700466403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62ABBE9F276FBC0F008ABB00 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,15 @@
 				6204B6B9276BD681006B1351 /* Theme.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		62ABBEA0276FCAFC008ABB00 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62ABBEA3276FCB6B008ABB00 /* StringExtensions.swift */,
+				62ABBEA5276FCBA2008ABB00 /* DateExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		62CF00542661B0E600466403 = {
@@ -82,6 +99,8 @@
 				6204B6B6276BD317006B1351 /* Models */,
 				6204B6BB276BEC39006B1351 /* MainView.swift */,
 				62DEA9C2276BF71100B81F1F /* JournalView.swift */,
+				62ABBEA0276FCAFC008ABB00 /* Extensions */,
+				62ACBAF2276FA9AE00BD85AB /* EntryDetailView.swift */,
 				62E17935276BFA7C004553B0 /* SettingsView.swift */,
 				62E17933276BFA0F004553B0 /* ExploreView.swift */,
 				62CF006F2661B15B00466403 /* CardView.swift */,
@@ -117,6 +136,9 @@
 			dependencies = (
 			);
 			name = "Paper Rails";
+			packageProductDependencies = (
+				62ABBE9E276FBC0F008ABB00 /* Introspect */,
+			);
 			productName = "Paper Rails";
 			productReference = 62CF005D2661B0E600466403 /* Paper Rails.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +166,9 @@
 				Base,
 			);
 			mainGroup = 62CF00542661B0E600466403;
+			packageReferences = (
+				62ABBE9D276FBC0F008ABB00 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 62CF005E2661B0E600466403 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,7 +201,10 @@
 				62CF00702661B15B00466403 /* CardView.swift in Sources */,
 				62E17936276BFA7C004553B0 /* SettingsView.swift in Sources */,
 				6204B6BA276BD681006B1351 /* Theme.swift in Sources */,
+				62ABBEA6276FCBA2008ABB00 /* DateExtensions.swift in Sources */,
 				62CF00612661B0E600466403 /* Paper_RailsApp.swift in Sources */,
+				62ABBEA4276FCB6B008ABB00 /* StringExtensions.swift in Sources */,
+				62ACBAF3276FA9AE00BD85AB /* EntryDetailView.swift in Sources */,
 				62CF00722661B5B200466403 /* TodayScheduleView.swift in Sources */,
 				62E17934276BFA0F004553B0 /* ExploreView.swift in Sources */,
 				62DEA9C3276BF71100B81F1F /* JournalView.swift in Sources */,
@@ -368,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62ABBE9D276FBC0F008ABB00 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62ABBE9E276FBC0F008ABB00 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62ABBE9D276FBC0F008ABB00 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 62CF00552661B0E600466403 /* Project object */;
 }

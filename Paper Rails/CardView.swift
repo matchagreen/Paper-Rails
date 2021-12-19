@@ -16,9 +16,9 @@ struct CardView: View {
             Divider()
             Text(entry.title)
                 .padding(.horizontal)
+                .font(.headline)
             Spacer()
         }
-        .frame(height: 40.0)
     }
 }
 
@@ -26,7 +26,7 @@ struct CardDateView: View {
     @Binding var entry: Entry
     var body: some View {
         VStack {
-            Text("\(entry.date.getWeekday())")
+            Text("\(entry.date.getWeekday().substring(toIndex: 3))")
             Text("\(entry.date.get(.month))/\(entry.date.get(.day))")
         }
         .frame(width: 40)
@@ -39,3 +39,4 @@ struct CardView_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
+
