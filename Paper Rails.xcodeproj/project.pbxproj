@@ -19,7 +19,7 @@
 		62CF00652661B0E800466403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62CF00642661B0E700466403 /* Assets.xcassets */; };
 		62CF00682661B0E800466403 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62CF00672661B0E800466403 /* Preview Assets.xcassets */; };
 		62CF00702661B15B00466403 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CF006F2661B15B00466403 /* CardView.swift */; };
-		62CF00722661B5B200466403 /* TodayScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CF00712661B5B200466403 /* TodayScheduleView.swift */; };
+		62D3D293277255E50027B31D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D3D292277255E50027B31D /* Location.swift */; };
 		62DEA9C3276BF71100B81F1F /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DEA9C2276BF71100B81F1F /* JournalView.swift */; };
 		62E17934276BFA0F004553B0 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E17933276BFA0F004553B0 /* ExploreView.swift */; };
 		62E17936276BFA7C004553B0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E17935276BFA7C004553B0 /* SettingsView.swift */; };
@@ -39,7 +39,7 @@
 		62CF00672661B0E800466403 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		62CF00692661B0E800466403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62CF006F2661B15B00466403 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		62CF00712661B5B200466403 /* TodayScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayScheduleView.swift; sourceTree = "<group>"; };
+		62D3D292277255E50027B31D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		62DEA9C2276BF71100B81F1F /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		62E17933276BFA0F004553B0 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		62E17935276BFA7C004553B0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -61,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				6204B6B7276BD631006B1351 /* Entry.swift */,
+				62D3D292277255E50027B31D /* Location.swift */,
 				6204B6B9276BD681006B1351 /* Theme.swift */,
 			);
 			path = Models;
@@ -96,15 +97,12 @@
 			isa = PBXGroup;
 			children = (
 				62CF00602661B0E600466403 /* Paper_RailsApp.swift */,
-				6204B6B6276BD317006B1351 /* Models */,
 				6204B6BB276BEC39006B1351 /* MainView.swift */,
-				62DEA9C2276BF71100B81F1F /* JournalView.swift */,
+				6204B6B6276BD317006B1351 /* Models */,
 				62ABBEA0276FCAFC008ABB00 /* Extensions */,
-				62ACBAF2276FA9AE00BD85AB /* EntryDetailView.swift */,
+				62D3D2912772541C0027B31D /* Journal */,
 				62E17935276BFA7C004553B0 /* SettingsView.swift */,
 				62E17933276BFA0F004553B0 /* ExploreView.swift */,
-				62CF006F2661B15B00466403 /* CardView.swift */,
-				62CF00712661B5B200466403 /* TodayScheduleView.swift */,
 				62CF00642661B0E700466403 /* Assets.xcassets */,
 				62CF00692661B0E800466403 /* Info.plist */,
 				62CF00662661B0E800466403 /* Preview Content */,
@@ -118,6 +116,16 @@
 				62CF00672661B0E800466403 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		62D3D2912772541C0027B31D /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				62DEA9C2276BF71100B81F1F /* JournalView.swift */,
+				62CF006F2661B15B00466403 /* CardView.swift */,
+				62ACBAF2276FA9AE00BD85AB /* EntryDetailView.swift */,
+			);
+			path = Journal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +213,8 @@
 				62CF00612661B0E600466403 /* Paper_RailsApp.swift in Sources */,
 				62ABBEA4276FCB6B008ABB00 /* StringExtensions.swift in Sources */,
 				62ACBAF3276FA9AE00BD85AB /* EntryDetailView.swift in Sources */,
-				62CF00722661B5B200466403 /* TodayScheduleView.swift in Sources */,
 				62E17934276BFA0F004553B0 /* ExploreView.swift in Sources */,
+				62D3D293277255E50027B31D /* Location.swift in Sources */,
 				62DEA9C3276BF71100B81F1F /* JournalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

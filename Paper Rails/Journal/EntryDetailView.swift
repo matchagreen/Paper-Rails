@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EntryDetailView: View {
     @Binding var entry: Entry
+    
     @Environment(\.presentationMode) var presentation
     
     var body: some View {
@@ -17,8 +18,7 @@ struct EntryDetailView: View {
                 .font(.title)
             Divider()
             EntryDescriptionView(entry: $entry)
-            
-            TextField("Body", text: $entry.body)
+            TextEditor(text: $entry.body)
             Spacer()
         }
         .padding(.horizontal)
@@ -48,6 +48,7 @@ struct EntryDetailView: View {
             }
         }
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -57,8 +58,8 @@ struct EntryDescriptionView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(entry.date.getWeekday())
                 Text(entry.date, style: .date)
+                Text("9 °C")
             }
             
             Spacer()

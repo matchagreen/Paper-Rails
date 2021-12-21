@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct JournalView: View {
-    @State private var isPresentingEntry = false
-    @State private var presentedEntry = Entry(title: "", body: "")
     @Binding var entries: [Entry]
+    
     var body: some View {
         List {
             ForEach($entries) { $entry in

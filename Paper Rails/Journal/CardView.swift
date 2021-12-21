@@ -12,11 +12,10 @@ struct CardView: View {
     var body: some View {
         HStack {
             CardDateView(entry: $entry)
-            
             Divider()
             Text(entry.title)
-                .padding(.horizontal)
                 .font(.headline)
+                .padding(.horizontal)
             Spacer()
         }
     }
