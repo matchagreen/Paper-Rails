@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Entry: Identifiable, Codable {
     let id: UUID
-    let date: Date
+    var date: Date
     var title: String
     var body: String
     

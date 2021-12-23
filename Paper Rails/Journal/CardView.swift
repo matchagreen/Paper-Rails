@@ -28,7 +28,7 @@ struct CardDateView: View {
             Text("\(entry.date.getWeekday().substring(toIndex: 3))")
             Text("\(entry.date.get(.month))/\(entry.date.get(.day))")
         }
-        .frame(width: 40)
+        .frame(width: 50)
     }
 }
 
