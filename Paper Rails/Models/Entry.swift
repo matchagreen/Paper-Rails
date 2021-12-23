@@ -13,6 +13,13 @@ struct Entry: Identifiable, Codable {
     var title: String
     var body: String
     
+    init() {
+        self.id = UUID()
+        self.date = Date()
+        self.title = ""
+        self.body = ""
+    }
+    
     init(date: Date = Date(), title: String, body: String) {
         self.id = UUID()
         self.date = date
@@ -20,6 +27,32 @@ struct Entry: Identifiable, Codable {
         self.body = body
     }
 }
+
+/*
+extension Entry {
+    struct Data: Codable {
+        var date: Date
+        var title: String
+        var body: String
+        
+        init() {
+            self.date = Date()
+            self.title = ""
+            self.body = ""
+        }
+        
+        init(date: Date, title: String, body: String) {
+            self.date = date
+            self.title = title
+            self.body = body
+        }
+    }
+    
+    var data: Data {
+        Data(date: date, title: title, body: body)
+    }
+}
+*/
 
 extension Entry {
     static func getSampleDate() -> [Entry] {

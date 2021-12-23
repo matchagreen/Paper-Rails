@@ -10,8 +10,6 @@ import SwiftUI
 struct EntryDetailView: View {
     @Binding var entry: Entry
     
-    @Environment(\.presentationMode) var presentation
-    
     var body: some View {
         VStack(alignment: .leading) {
             TextField("Title", text: $entry.title)
@@ -23,18 +21,6 @@ struct EntryDetailView: View {
         }
         .padding(.horizontal)
         .toolbar {
-            ToolbarItem(placement: .cancellationAction) {
-                Button("Cancel") {
-                    presentation.wrappedValue.dismiss()
-                }
-            }
-            
-            ToolbarItem(placement: .confirmationAction) {
-                Button("Save") {
-                    presentation.wrappedValue.dismiss()
-                }
-            }
-            
             ToolbarItemGroup(placement: .bottomBar) {
                 Button(action: {}) {
                     Image(systemName: "camera")
