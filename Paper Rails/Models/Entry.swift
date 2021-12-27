@@ -26,9 +26,14 @@ struct Entry: Identifiable, Codable {
         self.title = title
         self.body = body
     }
+    
+    mutating func update(from data: Data) {
+        date = data.date
+        title = data.title
+        body = data.body
+    }
 }
 
-/*
 extension Entry {
     struct Data: Codable {
         var date: Date
@@ -48,11 +53,17 @@ extension Entry {
         }
     }
     
+    init(data: Data) {
+        id = UUID()
+        date = data.date
+        title = data.title
+        body = data.body
+    }
+    
     var data: Data {
         Data(date: date, title: title, body: body)
     }
 }
-*/
 
 extension Entry {
     static func getSampleDate() -> [Entry] {

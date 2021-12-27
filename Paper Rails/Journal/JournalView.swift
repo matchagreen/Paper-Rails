@@ -11,6 +11,7 @@ struct JournalView: View {
     @State private var entryToAdd: Entry = Entry()
     @State private var isPresentingEntry = false
     @State private var isAddingEntry = false
+    @State private var tempData = Entry.Data()
     @Binding var entries: [Entry]
     
     var body: some View {
@@ -20,12 +21,13 @@ struct JournalView: View {
                     ZStack {
                         CardView(entry: $entry)
                         Button(action: {
+                            tempData = entry.data
                             isPresentingEntry = true
                         }) {EmptyView()}
                     }
                     .fullScreenCover(isPresented: $isPresentingEntry) {
                         NavigationView {
-                            EntryDetailView(entry: $entry)
+                            EntryDetailView(entry: $tempData)
                                 .toolbar {
                                     ToolbarItem(placement: .cancellationAction) {
                                         Button("Discard") {
@@ -34,6 +36,7 @@ struct JournalView: View {
                                     }
                                     ToolbarItem(placement: .confirmationAction) {
                                         Button("Done") {
+                                            entry.update(from: tempData)
                                             isPresentingEntry = false
                                         }
                                     }
@@ -51,14 +54,14 @@ struct JournalView: View {
             }
 
             FloatingButton(size: 45, action: {
-                resetNewEntry()
+                tempData = Entry.Data()
                 isAddingEntry = true
             })
                 .padding(.all, 30.0)
         }
         .fullScreenCover(isPresented: $isAddingEntry) {
             NavigationView {
-                EntryDetailView(entry: $entryToAdd)
+                EntryDetailView(entry: $tempData)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Cancel") {
@@ -67,17 +70,13 @@ struct JournalView: View {
                         }
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Add") {
+                                entries.append(Entry(data: tempData))
                                 isAddingEntry = false
-                                entries.append(entryToAdd)
                             }
                         }
                 }
             }
         }
-    }
-    
-    func resetNewEntry() {
-        entryToAdd = Entry()
     }
 }
 

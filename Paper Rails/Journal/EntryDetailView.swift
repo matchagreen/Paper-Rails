@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EntryDetailView: View {
-    @Binding var entry: Entry
+    @Binding var entry: Entry.Data
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -39,7 +39,7 @@ struct EntryDetailView: View {
 }
 
 struct EntryDescriptionView: View {
-    @Binding var entry: Entry
+    @Binding var entry: Entry.Data
     
     var body: some View {
         HStack {
@@ -63,7 +63,7 @@ struct EntryDescriptionView: View {
 struct EntryDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            EntryDetailView(entry: .constant(Entry.getSampleDate()[0]))
+            EntryDetailView(entry: .constant(Entry.getSampleDate()[0].data))
         }
     }
 }
