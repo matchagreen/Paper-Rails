@@ -3,10 +3,6 @@
 ### Framework: SwiftUI
 ### Languages: Swift
 
-This is a simple journaling app that helps you jot down your thoughts. I had the idea to create this during summer of 2021. Multiple entries can be created. The idea was to have each entry be a different tone of green-yellow-orange depending on the day it was written. In any given season, the colors most strongly resemble:
+This is a simple journaling app that helps you jot down your thoughts. Multiple entries can be entered, and the application should be able to recognize the day and time (and temptatively the temperature) when the entry was written.
 
-    - Spring: Green
-    - Summer: Yellow
-    - Fall: Orange
-    - Winter: Celeste
-    
+The explore section will prompt the user with simple short questions that will help them reflect about themselves, or just for entertainment. It will also show user statistics, such as streak, number of entries, a reminder of what was done a year ago, etc.
