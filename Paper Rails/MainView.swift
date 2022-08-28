@@ -12,28 +12,7 @@ struct MainView: View {
     
     var body: some View {
         TabView {
-            NavigationView {
-                JournalView(entries: $entries)
-            }
-            .tabItem {
-                Image(systemName: "book")
-                Text("Journal")
-            }
-            NavigationView {
-                ExploreView()
-            }
-            .tabItem {
-                Image(systemName: "brain")
-                Text("Explore")
-            }
-            
-            NavigationView {
-                SettingsView()
-            }
-            .tabItem {
-                Image(systemName: "gearshape")
-                Text("Settings")
-            }
+            JournalView(entries: $entries)
         }
     }
 }
