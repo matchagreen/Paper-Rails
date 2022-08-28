@@ -11,7 +11,7 @@ struct MainView: View {
     @Binding var entries: [Entry]
     
     var body: some View {
-        TabView {
+        NavigationView {
             JournalView(entries: $entries)
         }
     }
