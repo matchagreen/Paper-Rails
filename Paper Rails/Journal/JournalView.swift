@@ -65,12 +65,14 @@ struct JournalView: View {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Cancel") {
                                 isAddingEntry = false
+                                tempData = Entry.Data()
                             }
                         }
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Add") {
                                 entries.append(Entry(data: tempData))
                                 isAddingEntry = false
+                                tempData = Entry.Data()
                             }
                         }
                 }
