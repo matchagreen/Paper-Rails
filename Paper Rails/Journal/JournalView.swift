@@ -50,14 +50,13 @@ struct JournalView: View {
             }
             .navigationTitle("Journal")
             .toolbar {
-                EditButton()
+                ToolbarItemGroup(placement: .bottomBar) {
+                    EditButton()
+                    Button(action: {isAddingEntry = true}) {
+                        Text("Add")
+                    }
+                }
             }
-
-            FloatingButton(size: 45, action: {
-                tempData = Entry.Data()
-                isAddingEntry = true
-            })
-                .padding(.all, 30.0)
         }
         .fullScreenCover(isPresented: $isAddingEntry) {
             NavigationView {
