@@ -26,9 +26,6 @@ struct EntryDetailView: View {
                     Image(systemName: "camera")
                 }
                 Button(action: {}) {
-                    Image(systemName: "location.north.circle")
-                }
-                Button(action: {}) {
                     Image(systemName: "photo")
                 }
             }
