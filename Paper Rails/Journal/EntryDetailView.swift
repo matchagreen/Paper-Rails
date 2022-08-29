@@ -23,7 +23,7 @@ struct EntryDetailView: View {
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
                 Button(action: {}) {
-                    Image(systemName: "camera")
+                    Text(entry.date, style: .date)
                 }
                 Button(action: {}) {
                     Image(systemName: "photo")
@@ -41,15 +41,12 @@ struct EntryDescriptionView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(entry.date, style: .date)
-                Text("9 °C")
-            }
-            
-            Spacer()
-            
-            VStack(alignment: .trailing) {
                 Text("Reykjavik")
                 Text("Iceland")
+            }
+            Spacer()
+            VStack(alignment: .trailing) {
+                Text("9 °C")
             }
         }
         .font(.caption)
