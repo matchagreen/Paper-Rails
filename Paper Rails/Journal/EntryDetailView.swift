@@ -22,9 +22,9 @@ struct EntryDetailView: View {
         .padding(.horizontal)
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
-                Button(action: {}) {
-                    Text(entry.date, style: .date)
-                }
+                DatePicker("", selection: $entry.date)
+                    .datePickerStyle(.compact)
+                    .labelsHidden()
                 Button(action: {}) {
                     Image(systemName: "photo")
                 }
