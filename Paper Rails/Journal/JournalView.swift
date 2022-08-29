@@ -32,12 +32,14 @@ struct JournalView: View {
                                     ToolbarItem(placement: .cancellationAction) {
                                         Button("Discard") {
                                             isPresentingEntry = false
+                                            tempData = Entry.Data()
                                         }
                                     }
                                     ToolbarItem(placement: .confirmationAction) {
                                         Button("Done") {
                                             entry.update(from: tempData)
                                             isPresentingEntry = false
+                                            tempData = Entry.Data()
                                         }
                                     }
                                 }
